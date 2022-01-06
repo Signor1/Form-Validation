@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Head -->
+	<title>Form Validation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/form.css" rel="stylesheet" type="text/css"/>
+	<link href="fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+<!-- End of Head -->
+<body>
+	<!-- Content container -->
+<div class="container">
+<!-- Content for logo and image -->
+	<div class="content">
+        <div class="logo">
+          <img src="logo.svg" alt="" />
+        </div>
+
+        <div class="image"></div>
+
+        <div class="text">
+          Start for free & get <br />
+          attractive offers today !
+        </div>
+      </div>
+<!-- End of logo/image content -->
+
+<!-- Form content -->
+	<form id="form">
+    <div class="social">
+    	<!-- Switch for Theme -->
+    	<h2>Light / Dark
+    	<input onclick="toggle(this.form)" id="checkbox" name="checkbox" type="checkbox" /><label for="checkbox" id="checklabel">Toggle</label>
+    </h2>
+    <!-- End of switch -->
+
+      <div class="title">Get Started</div>
+      <div class="question">
+        Already Have an Account? <br />
+        <span id="sign">Sign In</span>
+      </div>
+    </div>
+
+		 <!-- User Name input -->
+
+         <div>
+	     <label for="username">User Name</label>
+         <i class="fas fa-user"></i>
+
+    <input type="text" oninput="checkUserLen()" name="username"id="username" spellcheck="true" placeholder="Enter Username"/>
+
+    <i class="fas fa-exclamation-circle failure-icon"></i>
+    <i class="far fa-check-circle success-icon"></i>
+
+    <div class="error"></div>
+
+</div>
+
+<!-- Email input -->
+
+<div>
+	<label for="email">Email</label>
+    <i class="far fa-envelope"></i>
+
+    <input type="email" name="email" id="email" placeholder="abc@example.com" oninput="checkEmail()" />
+
+    <i class="fas fa-exclamation-circle failure-icon"></i>
+    <i class="far fa-check-circle success-icon"></i>
+
+    <div class="error"></div>
+
+</div>
+
+
+<!--   Password input -->
+
+<div>
+	<label for="password">Password</label>
+    <i class="fas fa-lock"></i>
+
+    <input type="password" name="password" id="password" placeholder="Enter Password" oninput="checkPass()" />
+
+    <i class="fas fa-exclamation-circle failure-icon" id="passIcon"></i>
+    <i class="far fa-check-circle success-icon" id="passIcon"></i>
+    <i class="fa fa-eye-slash" id="eyeslash" onclick="showPass()"></i>
+
+    <div class="error"></div>
+
+</div>
+<!-- Confirm  Password input -->
+
+<div>
+	<label for="password">Confirm Password</label>
+    <i class="fas fa-lock"></i>
+
+    <input type="password" oninput="misMatch()" name="password" id="c-password" placeholder="Confirm Password" />
+
+    <i class="fas fa-exclamation-circle failure-icon" id="passIcon"></i>
+    <i class="far fa-check-circle success-icon" id="passIcon"></i>
+    <i class="fa fa-eye-slash" id="eyeslash1" onclick="showPass()"></i>
+
+    <div class="error"></div>
+
+</div>
+<button id="btn" type="submit">SUBMIT&nbsp;<span class="fa fa-sign-in-alt"></span></button>
+	</form>
+
+</div>
+</body>
+<script type="text/javascript" src="js/form.js"></script>
+</html>
